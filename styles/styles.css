@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --paleblue: hsl(225, 100%, 94%);
+    --brightblue: hsl(245, 75%, 52%);
+    --verypaleblue: hsl(225, 100%, 98%);
+    --desaturatedblue: hsl(224, 23%, 55%);
+    --darkblue: hsl(223, 47%, 23%);
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+#bd{
+    background-color: var(--paleblue);
+}
+
+
+.background-wave{
+    background: url("../images/pattern-background-mobile.svg") no-repeat center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 400px; 
+    width: 100%;
+    z-index: -10;
+}
+
+.page-setup{
+    display: grid;
+    grid-template-rows: 0.5fr 20fr 0.5fr;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+
+    margin: 20px;
+    border-radius: 20px 20px 20px 20px;
+    background-color: white;
+    max-width: 450px;
+    box-shadow: 0px 5px 30px var(--desaturatedblue);
+}
+
+.page-setup-footer{
+    height: 20px;
+    width: 20px;
+}
+
+.music-dude{
+    background: url("../images/illustration-hero.svg") no-repeat center/cover;
+    width: 100%;
+    height: 220px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.header{
+    text-align: center;
+    margin-top: 1em;
+    color: var(--darkblue);
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.order-info{
+    padding: 0 15%;
+    text-align: center;
+    color: var(--desaturatedblue);
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.pmt-info-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-gap: 1em;
+    align-content: center;
+    justify-content: center;
+    padding: 10px 10px;
+    width: 80%;
+    
+    margin: auto;
+    margin-top: 30px;
+    background-color: var(--verypaleblue);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.wrapper-music-icon{
+    border: 1px solid red;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.music-icon{
+    background: url("../images/icon-music.svg") no-repeat center/cover;
+    width: 50px;
+    height: 50px;
+/* jak pchnac ta ikonke z nutka na srodek tego elementu w gridzie??? */
+}
+
+.nested{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+
+.line1{
+    color: var(--darkblue);
+    font-weight: 900;     
+}
+
+.line2{
+    color: var(--desaturatedblue);
+}
+
+.align-change{
+    display: grid;
+    justify-content: flex-end;
+    padding-right: 1em;
+}
+
+
+.btn-pmt-info-change{
+    background-color: var(--verypaleblue);
+    color: var(--brightblue);
+    border: none;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.btn-pmt-info-change:hover{
+    color: hsl(245, 75%, 70%);
+}
+
+.btn-proceed-to-payment{
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    background-color: var(--brightblue);
+    width: 85%;
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    height: 50px;
+    margin: 30px auto;
+    display: block;
+    box-shadow: 0px 15px 30px hsl(245, 75%, 85%);
+}
+
+.btn-proceed-to-payment:hover{
+    background-color: hsl(245, 75%, 70%);
+}
+
+.btn-cancle-order{
+    background-color: transparent;
+    border: none;
+    font-weight: 900;
+    font-size: 1em;
+    color: var(--desaturatedblue);
+    display: block;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.btn-cancle-order:hover{
+    color: var(--darkblue);
+}
+
+
+@media (min-width: 768px) {
+    .background-wave{
+        background: url("../images/pattern-background-desktop.svg") no-repeat center/cover;
+        /* background-position: 0  -100px; */
+        height: 70%;
+        z-index: -10;
+    }
+}
